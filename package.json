@@ -1,0 +1,18 @@
+{
+  "name": "poketeam",
+  "version": "1.0.0",
+  "description": "Web app using AngularJS and Pokeapi.co",
+  "main": "app.js",
+  "scripts": {
+    "start": "browser-sync start --server --files=\"**/*.html, src/**/*.js,src/**/*.css\"",
+    "postinstall": "bower install"
+   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marinaoliveiraec/poketeam"
+  },
+  "author": "Marina Oliveira",
+  "dependencies": {
+    "browser-sync": "^2.14.0"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="poketeam">
+<head>
+    <title>Poketeam</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="src/app.css">
+	
+	<!-- vendor scripts -->
+	<script type="text/javascript" src='lib/angular/angular.js'></script>
+    <script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src='lib/angular-bootstrap/ui-bootstrap-tpls.js'></script>
+	<script type="text/javascript" src='lib/ui-router/release/angular-ui-router.js'></script>
+
+	<!-- app scripts -->
+	<script type="text/javascript" src='src/app.js'></script>
+
+</head>
+<body ng-controller="teamController" >
+	
+	<div class="jumbotron backImg text-center" >
+		<h1 class="pageTitle">Poketeam</h1>
+	</div>
+	<nav class="navbar mynavbar" >
+		<div class=" containerNv">
+			<ul class="nav navbar-nav">
+				<li><a href="#/"><i class="fa fa-home"></i>Novo time</a></li>
+				<li><a href="#/times"><i class="fa fa-shield"></i>Meus times</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="main" >
+		<div ng-view ></div>
+	</div>
+
+</body>
+</html>

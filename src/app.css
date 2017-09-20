@@ -1,0 +1,54 @@
+.backImg {
+    
+	background-image: url("poketeam.jpg");
+	background-size: contain;
+}
+.btn-primary{
+	background-color: black;
+	color: white;
+}
+.upper {
+    text-transform: uppercase;
+}
+.borderColor {
+	border-color: #ffe77b;
+}
+
+.pageTitle {
+    color:black; 
+    text-shadow: 0 0 20px #fff, 0 -10px 20px #fff, 
+	0 10px 20px #fff, -20px 0 40px #fff, 
+	20px 0 40px #fff; 
+    }
+	
+.conteiner.containerNv {
+    width: auto;
+}
+
+.text-format{
+	color:white;
+	text-shadow: 0 0 20px #000, 0 -10px 20px #000, 
+	0 10px 20px #000, -20px 0 40px #000, 
+	20px 0 40px #fff; 
+}
+	
+.mynavbar {
+    background-color: black;
+    border-color: yellow;
+	color:white;
+}
+.nav > li > a {
+    color: gray;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.btnremove {
+    text-align: -webkit-center;
+    padding-top: inherit;
+}
+
+.myform{
+	color: gray;
+    font-weight: 900;
+}

@@ -1,0 +1,61 @@
+<div>
+	<div class="row">
+		<div class='container col-sm-4'>
+			<div class=" text-center"  >
+				<h3> Pokémons disponíveis </h3>
+			</div>
+			<div class="form-group has-feedback">
+				<input class="form-control" placeholder="Busca de pokemons" ng-model='busca'>
+			</div>
+			<progressbar ng-show='carregando' value="'70'" >Buscando pokemons</progressbar>
+
+			<div ng-hide='carregando' style="height:60vh; overflow-y: scroll;">
+			
+				<div class='panel panel-default col-sm-6 borderColor'
+						ng-repeat="pokemon in pokemons | filter: busca">
+					<div class='panel-body'>
+						<div class="row">
+							<div   class="col-sm-6" >
+								<img ng-src='{{pokemon.img}}' class='pull-left' height="100px" ></img>
+							</div>
+							<div style="align-items: center" class="col-sm-6">
+								<h5 class="upper">{{pokemon.name }}</h5>
+								<button type="button" class="btn btn-primary" ng-click="incluiPokemon(pokemon,novoTime)" data-toggle="tooltip" data-placement="top" 
+									title="Adicionar {{pokemon.name }} ao time" data-original-title="Tooltip on top">
+									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-8">
+			<h3 class="text-format text-center">Novo time </h3> 
+			<div class="form-group" style="display: flex;">
+				<input class="form-control" placeholder="Nome do time" ng-model='novoTime.nome'>
+				<button type="button" ng-click="adicionaTime()" 
+					class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Salvar time" data-original-title="Tooltip on top">
+					<span>Salvar</span>
+				</button>
+			</div>
+			<div ng-repeat="elementoPokemon in novoTime.pokemons" >
+				<div   class="col-sm-6 col-md-4" >
+					<div  class="thumbnail">
+					  <img ng-src="{{elementoPokemon.img}}" >
+					  <div class="caption row">
+							<div   class="col-sm-6" >
+								<h3 class="upper">{{elementoPokemon.name}}</h3>
+							</div>
+							<div   class="col-sm-6 btnremove" >
+								<button type="button" class="btn btn-primary " ng-click="excluiPokemon(elementoPokemon.id)" data-toggle="tooltip" data-placement="top" 
+									title="Retirar  {{elementoPokemon.name }} do time" data-original-title="Tooltip on top">
+									<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+								</button>
+							</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
